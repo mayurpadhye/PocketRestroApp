@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/food_texture"
+    tools:showIn="@layout/activity_welcome">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/food_texture"
+    ></RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:alpha="0.1"
+        ></RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="330dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutDots"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dots_height"
+       android:layout_below="@+id/view_pager"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"></LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+
+        android:layout_above="@id/layoutDots"
+        android:background="@android:color/darker_gray" />
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        app:cardBackgroundColor="@color/White"
+        app:cardCornerRadius="5dp"
+        android:layout_below="@+id/layoutDots"
+        app:cardUseCompatPadding="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        android:layout_marginBottom="5dp"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We need your location"
+                android:textColor="@color/TextColor"
+                android:padding="5dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center"/>
+            <Button
+                android:id="@+id/btn_detect_my_location"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:textColor="@color/White"
+                android:text="Detect my location"
+                android:textAllCaps="false"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:paddingStart="28dp"
+                android:drawableLeft="@drawable/ic_gps_2"
+                android:background="@drawable/button_orange"
+                android:layout_marginTop="20dp"
+
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp"
+                android:layout_margin="20dp"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/darker_gray"
+                    ></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:text="Or"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/darker_gray"
+                    ></View>
+            </LinearLayout>
+            <android.support.v7.widget.CardView
+                android:layout_width="200dp"
+                android:id="@+id/cv_enter_manually"
+                app:cardUseCompatPadding="true"
+                android:layout_marginBottom="20dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="47dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Enter location manually"
+                    android:textColor="@color/color_orange"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="wrap_content" />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

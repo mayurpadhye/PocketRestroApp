@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/food_texture">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.1"
+            android:background="@android:color/black"
+            ></RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+        <com.daimajia.slider.library.SliderLayout
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            custom:pager_animation="Accordion"
+            custom:auto_cycle="true"
+            custom:indicator_visibility="visible"
+            custom:pager_animation_span="1100"
+            android:layout_height="300dp"/>
+
+        <com.daimajia.slider.library.Indicators.PagerIndicator
+            android:id="@+id/custom_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            custom:selected_color="#0095BF"
+            custom:unselected_color="#55333333"
+            custom:shape="oval"
+            custom:selected_padding_left="5dp"
+            custom:selected_padding_right="5dp"
+            custom:unselected_padding_left="5dp"
+            custom:unselected_padding_right="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            custom:selected_width="6dp"
+            custom:selected_height="6dp"
+            custom:unselected_width="6dp"
+            custom:unselected_height="6dp"
+            android:layout_marginBottom="20dp"
+            />
+        <com.daimajia.slider.library.Indicators.PagerIndicator
+            android:id="@+id/custom_indicator2"
+            style="@style/AndroidImageSlider_Corner_Oval_Orange"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+        />
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/White"
+            app:cardBackgroundColor="@color/White"
+            app:cardCornerRadius="4dp"
+            app:cardUseCompatPadding="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+            android:layout_marginBottom="0dp"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="We need your location"
+                    android:textColor="@color/TextColor"
+                    android:padding="5dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"/>
+                <Button
+                    android:id="@+id/btn_detect_my_location"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:textColor="@color/White"
+                    android:text="Detect my location"
+                    android:textAllCaps="false"
+                    android:textSize="14dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:paddingStart="28dp"
+                    android:drawableLeft="@drawable/ic_gps_2"
+                    android:background="@drawable/button_orange"
+                    android:layout_marginTop="20dp"
+
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="25dp"
+                    android:layout_margin="20dp"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_weight="0.5"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/darker_gray"
+                        ></View>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Or"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_weight="0.5"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/darker_gray"
+                        ></View>
+                </LinearLayout>
+                <android.support.v7.widget.CardView
+                    android:layout_width="200dp"
+                    android:id="@+id/cv_enter_manually"
+                    app:cardUseCompatPadding="true"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="47dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Enter location manually"
+                        android:textColor="@color/color_orange"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_height="wrap_content" />
+                </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</RelativeLayout>
